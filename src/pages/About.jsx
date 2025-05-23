@@ -1,6 +1,8 @@
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import { FaReact, FaJava, FaJs, FaHtml5, FaCss3Alt, FaDatabase, FaCodeBranch } from 'react-icons/fa';
 import { motion } from 'framer-motion';
+import { FaPaintBrush } from 'react-icons/fa';
+
 import './About.css';
 
 function About() {
