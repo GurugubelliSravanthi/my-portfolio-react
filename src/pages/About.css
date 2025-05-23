@@ -1,0 +1,385 @@
+/* About Section - Premium Styling */
+.about-section {
+  position: relative;
+  padding: 120px 0;
+  overflow: hidden;
+  background-color: #fafafa;
+}
+
+.about-background-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(rgba(13, 110, 253, 0.1) 1px, transparent 1px);
+  background-size: 30px 30px;
+  z-index: 0;
+}
+
+.about-gradient-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(250, 250, 250, 0.9) 0%, rgba(245, 245, 245, 0.9) 100%);
+  z-index: 1;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 80px;
+  position: relative;
+  z-index: 2;
+}
+
+.section-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #121212;
+  margin-bottom: 15px;
+  position: relative;
+  display: inline-block;
+  font-family: 'Playfair Display', serif;
+}
+
+.title-decoration {
+  position: relative;
+  display: inline-block;
+}
+
+.title-decoration::after {
+  content: '';
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  width: 100%;
+  height: 12px;
+  background-color: rgba(76, 201, 240, 0.3);
+  z-index: -1;
+  transform: skewY(-2deg);
+}
+
+.section-subtitle {
+  font-size: 1.3rem;
+  color: #666;
+  font-weight: 300;
+  letter-spacing: 1px;
+  margin-bottom: 25px;
+}
+
+.section-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 0 auto;
+  width: 200px;
+}
+
+.divider-line {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(13, 110, 253, 0.5), transparent);
+  flex-grow: 1;
+}
+
+.divider-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #0d6efd;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(13, 110, 253, 0.5);
+}
+
+/* Bio Card */
+.bio-col {
+  padding-right: 30px;
+}
+
+.bio-card {
+  position: relative;
+  height: 100%;
+}
+
+.bio-card-inner {
+  position: relative;
+  height: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
+}
+
+.bio-card-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  z-index: 1;
+}
+
+.bio-content {
+  position: relative;
+  z-index: 2;
+  padding: 40px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.bio-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #121212;
+  margin-bottom: 30px;
+  position: relative;
+  font-family: 'Playfair Display', serif;
+}
+
+.title-highlight {
+  color: #0d6efd;
+  position: relative;
+}
+
+.title-highlight::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: rgba(13, 110, 253, 0.3);
+}
+
+.bio-text {
+  flex-grow: 1;
+}
+
+.bio-text p {
+  font-size: 1.1rem;
+  color: #444;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  font-weight: 300;
+}
+
+.bio-text strong {
+  color: #121212;
+  font-weight: 500;
+}
+
+.signature-block {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.signature-line {
+  width: 100px;
+  height: 2px;
+  background-color: #0d6efd;
+  margin-bottom: 5px;
+}
+
+.signature-name {
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.8rem;
+  color: #0d6efd;
+}
+
+/* Skills Section */
+.skills-col {
+  padding-left: 30px;
+}
+
+.skills-container {
+  height: 100%;
+  position: relative;
+}
+
+.skills-header {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.skills-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #121212;
+  margin-bottom: 10px;
+  font-family: 'Playfair Display', serif;
+}
+
+.skills-subtitle {
+  font-size: 1rem;
+  color: #666;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.skill-item {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card {
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  height: 100%;
+  background: white;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.skill-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  z-index: -1;
+}
+
+.skill-card:hover {
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.skill-icon {
+  font-size: 2rem;
+  margin: 0 auto 20px;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+.icon-backdrop {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  z-index: -1;
+  opacity: 0.2;
+}
+
+.skill-card h5 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #121212;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.skill-card p {
+  font-size: 0.95rem;
+  color: #666;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 300;
+}
+
+.skill-meta {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.skill-progress {
+  flex-grow: 1;
+  height: 6px;
+  background: #eee;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  border-radius: 3px;
+}
+
+.skill-percent {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #121212;
+  width: 40px;
+  text-align: right;
+}
+
+/* Responsive Design */
+@media (max-width: 1199px) {
+  .skills-grid {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  }
+}
+
+@media (max-width: 991px) {
+  .about-section {
+    padding: 80px 0;
+  }
+
+  .bio-col,
+  .skills-col {
+    padding: 0 15px;
+  }
+
+  .bio-col {
+    margin-bottom: 40px;
+  }
+
+  .section-title {
+    font-size: 2.8rem;
+  }
+
+  .bio-content {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .section-title {
+    font-size: 2.4rem;
+  }
+
+  .bio-title,
+  .skills-title {
+    font-size: 1.8rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 575px) {
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .bio-card-inner {
+    border-radius: 15px;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,123 @@
+/* Footer Section Styles */
+.footer-section {
+  background: linear-gradient(135deg, #2c3e50, #4ca1af);
+  color: #f0f4f8;
+  padding: 60px 20px 30px;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 -8px 24px rgba(76, 161, 175, 0.3);
+  user-select: none;
+}
+
+/* Container grid */
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Section Headings */
+.footer-container h3 {
+  font-weight: 700;
+  font-size: 1.3rem;
+  margin-bottom: 18px;
+  color: #e1f0ff;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+}
+
+/* Paragraph and Text */
+.footer-about p {
+  line-height: 1.6;
+  color: #c7d8eb;
+  font-size: 1rem;
+  max-width: 320px;
+}
+
+/* Lists */
+.footer-links ul,
+.footer-contact ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links ul li,
+.footer-contact ul li {
+  margin-bottom: 14px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  color: #c7d8eb;
+}
+
+.footer-links ul li:hover,
+.footer-contact ul li:hover {
+  color: #ffdd57;
+}
+
+/* Links in footer links */
+.footer-links ul li a {
+  color: #c7d8eb;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  display: inline-block;
+}
+
+.footer-links ul li a:hover {
+  color: #ffdd57;
+  text-decoration: underline;
+}
+
+/* Social Icons */
+.footer-social .social-icons {
+  display: flex;
+  gap: 18px;
+}
+
+.footer-social .social-icons a {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  font-size: 1.6rem;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: background 0.3s ease, transform 0.3s ease;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(76, 161, 175, 0.25);
+}
+
+.footer-social .social-icons a:hover {
+  background: #ffdd57;
+  color: #2c3e50;
+  transform: scale(1.15);
+  box-shadow: 0 8px 20px rgba(255, 221, 87, 0.6);
+}
+
+/* Footer Bottom Text */
+.footer-bottom {
+  text-align: center;
+  margin-top: 25px;
+  font-size: 0.9rem;
+  color: #a9b9cc;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  user-select: text;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .footer-about p {
+    max-width: 100%;
+  }
+}
