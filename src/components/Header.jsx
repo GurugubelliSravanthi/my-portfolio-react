@@ -49,9 +49,7 @@ function Header() {
       >
         <Container>
           <Navbar.Brand as={Link} to="/" className="brand-logo">
-            {/* <div className="brand-icon">
-               />
-            </div> */}
+            
             <span className="brand-name">SG</span>
             {/* <span className="brand-highlight">Gurugubelli</span> */}
           </Navbar.Brand>

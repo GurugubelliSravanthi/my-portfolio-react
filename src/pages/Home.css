@@ -281,3 +281,34 @@ body {
     height: 260px;
   }
 }
+.profile-photo {
+  width: 150%;
+  max-width: 650px;
+  /* Increased significantly */
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  margin: 0 auto;
+  display: block;
+}
+@media (min-width: 1200px) {
+  .profile-photo {
+    max-width: 750px;
+  }
+}
+
+.profile-photo:hover {
+  transform: scale(1.05);
+}
+
+.hero-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+}
+
+.hero-image {
+  text-align: center;
+}

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { FiGithub, FiLinkedin, FiTwitter, FiMail } from 'react-icons/fi';
 import { FaLaptopCode } from 'react-icons/fa';
 import './Home.css';
+import SG from '../assets/SRAVS.png';
 
 function Home() {
   return (
@@ -42,30 +43,31 @@ function Home() {
               </div>
             </div>
             <div className="social-links">
-              <a href="https://github.com" target="_blank" rel="noreferrer" aria-label="GitHub">
+              <a href="https://github.com/Gurugubellisravanthi" target="_blank" rel="noreferrer" aria-label="GitHub">
                 <FiGithub />
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+              <a href="https://linkedin.com/in/sravanthigurgubelli1" target="_blank" rel="noreferrer" aria-label="LinkedIn">
                 <FiLinkedin />
               </a>
-              <a href="https://twitter.com" target="_blank" rel="noreferrer" aria-label="Twitter">
+              {/* <a href="https://twitter.com" target="_blank" rel="noreferrer" aria-label="Twitter">
                 <FiTwitter />
-              </a>
-              <a href="mailto:your@email.com" aria-label="Email">
+              </a> */}
+              <a href="mailto:sravanthigurgubelli@email.com" aria-label="Email">
                 <FiMail />
               </a>
             </div>
           </Col>
           <Col lg={6} className="home-image-col">
-            <div className="hero-image-container">
-              <div className="hero-image"></div>
-              {/* <div className="tech-stack">
-                <span>React</span>
-                <span>Node.js</span>
-                <span>Express</span>
-                <span>MongoDB</span>
-              </div> */}
-            </div>
+          <div className="hero-image-container">
+  <div className="hero-image">
+    <img 
+      src={SG}
+      alt="Sravanthi Gurugubelli" 
+      className="profile-photo"
+    />
+  </div>
+</div>
+
           </Col>
         </Row>
       </Container>
