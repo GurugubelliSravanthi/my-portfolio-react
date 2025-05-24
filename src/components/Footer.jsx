@@ -1,38 +1,31 @@
 import React from 'react';
 import './Footer.css';
+import { Link } from 'react-router-dom'; // Make sure this is at the top of your Footer file
+
 export default function Footer() {
   return (
     <footer className="footer-section">
       <div className="footer-container">
         <div className="footer-about">
-          <h3>About Us</h3>
+          <h3>About Me</h3>
           <p>
-            We are passionate about creating amazing web experiences. Connect with us
+            I'm passionate about creating amazing web experiences. Connect with me
             to build something great together.
           </p>
         </div>
 
+
         <div className="footer-links">
           <h3>Quick Links</h3>
           <ul>
-            <li><a href="#home" aria-label="Home">Home</a></li>
-            <li><a href="#services" aria-label="Services">Services</a></li>
-            <li><a href="#portfolio" aria-label="Portfolio">Portfolio</a></li>
-            <li><a href="#contact" aria-label="Contact">Contact</a></li>
+            <li><Link to="/" aria-label="Home">Home</Link></li>
+            <li><Link to="/about" aria-label="About">About</Link></li>
+            <li><Link to="/projects" aria-label="Projects">Projects</Link></li>
+            <li><Link to="/contact" aria-label="Contact">Contact</Link></li>
           </ul>
-        </div>
-{/* 
-        <div className="footer-contact">
-          <h3>Contact Info</h3>
-          <ul>
-            <li>📍 123 Web Street, Design City</li>
-            <li>✉️ contact@yourdomain.com</li>
-            <li>📞 +1 (555) 123-4567</li>
-          </ul>
-        </div> */}
-
+        </div>  
         <div className="footer-social">
-          <h3>Follow Us</h3>
+          <h3>Connect with me on</h3>
           <div className="social-icons">
             <a href="https://facebook.com" aria-label="Facebook" target="_blank" rel="noopener noreferrer">🌐</a>
             <a href="https://twitter.com" aria-label="Twitter" target="_blank" rel="noopener noreferrer">🐦</a>
