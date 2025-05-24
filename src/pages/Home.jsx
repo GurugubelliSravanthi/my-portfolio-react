@@ -66,7 +66,8 @@ function Home() {
       className="profile-photo"
     />
   </div>
-</div>
+            </div>
+            
 
           </Col>
         </Row>

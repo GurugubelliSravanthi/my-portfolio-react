@@ -199,12 +199,12 @@ body {
 
 .hero-image-container {
   position: relative;
-  width: 320px;
-  height: 320px;
+  width: 500px;
+  height: 500px;
 }
 
 .hero-image {
-  width: 100%;
+  width: 300%;
   height: 100%;
   background: linear-gradient(135deg, #ffc0cb 0%, #f9a1b7 100%);
   border-radius: 40% 60% 60% 40% / 40% 40% 60% 60%;
@@ -284,10 +284,9 @@ body {
 .profile-photo {
   width: 150%;
   max-width: 650px;
-  /* Increased significantly */
-  border-radius: 50%;
+  /* border-radius: 50%; */
   object-fit: cover;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  /* box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2); */
   transition: transform 0.3s ease;
   margin: 0 auto;
   display: block;
