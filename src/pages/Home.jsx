@@ -1,7 +1,7 @@
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { FiGithub, FiLinkedin, FiTwitter, FiMail } from 'react-icons/fi';
-import { FaReact } from 'react-icons/fa';
+import { FaLaptopCode } from 'react-icons/fa';
 import './Home.css';
 
 function Home() {
@@ -11,17 +11,18 @@ function Home() {
         <Row className="align-items-center">
           <Col lg={6} className="home-content">
             <div className="intro-text">
-              <span className="greeting">Hello, I'm</span>
+              <span className="greeting">Hi there, my name is</span>
               <h1 className="name-heading">
-                <span className="name">Sravanthi</span>
-                <span className="wave-emoji" role="img" aria-label="waving hand">👋</span>
+                <span className="name">Sravanthi Gurugubelli</span>
+                <span className="wave-emoji" role="img" aria-label="Waving hand">👋</span>
               </h1>
               <h2 className="profession">
-                <FaReact className="react-icon" /> React Developer
+                <FaLaptopCode className="react-icon" /> Full Stack Developer
               </h2>
               <p className="description">
-                I build beautiful, responsive web applications with modern technologies. 
-                Passionate about creating intuitive user experiences.
+                I specialize in building scalable, high-performance web applications from front-end to back-end. 
+                With a strong foundation in both client-side and server-side technologies, 
+                I am passionate about delivering seamless digital experiences.
               </p>
               <div className="cta-buttons">
                 <Button 
@@ -29,28 +30,28 @@ function Home() {
                   to="/projects" 
                   className="primary-btn"
                 >
-                  View My Projects
+                  Explore My Work
                 </Button>
                 <Button 
                   href="#contact" 
                   variant="outline" 
                   className="secondary-btn"
                 >
-                  Contact Me
+                  Get in Touch
                 </Button>
               </div>
             </div>
             <div className="social-links">
-              <a href="https://github.com" target="_blank" rel="noreferrer">
+              <a href="https://github.com" target="_blank" rel="noreferrer" aria-label="GitHub">
                 <FiGithub />
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noreferrer">
+              <a href="https://linkedin.com" target="_blank" rel="noreferrer" aria-label="LinkedIn">
                 <FiLinkedin />
               </a>
-              <a href="https://twitter.com" target="_blank" rel="noreferrer">
+              <a href="https://twitter.com" target="_blank" rel="noreferrer" aria-label="Twitter">
                 <FiTwitter />
               </a>
-              <a href="mailto:your@email.com">
+              <a href="mailto:your@email.com" aria-label="Email">
                 <FiMail />
               </a>
             </div>
@@ -58,12 +59,12 @@ function Home() {
           <Col lg={6} className="home-image-col">
             <div className="hero-image-container">
               <div className="hero-image"></div>
-              <div className="tech-stack">
+              {/* <div className="tech-stack">
                 <span>React</span>
-                <span>JavaScript</span>
-                <span>HTML/CSS</span>
-                <span>Bootstrap</span>
-              </div>
+                <span>Node.js</span>
+                <span>Express</span>
+                <span>MongoDB</span>
+              </div> */}
             </div>
           </Col>
         </Row>
