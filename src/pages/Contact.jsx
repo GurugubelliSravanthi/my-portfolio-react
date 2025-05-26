@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Contact.css';
+
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',
@@ -14,7 +15,6 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Add your form submit logic here (e.g., send data to backend)
     alert(`Thank you, ${formData.name}! Your message has been received.`);
     setFormData({ name: '', email: '', message: '' });
   };
@@ -22,7 +22,7 @@ export default function Contact() {
   return (
     <section className="contact-section">
       <div className="contact-container">
-        <h2 className="contact-title">Get in Touch</h2>
+        <h2 className="contact-title">Get in Touch 💌</h2>
         <p className="contact-subtitle">
           Have a question or want to work together? Send me a message!
         </p>
@@ -39,6 +39,7 @@ export default function Contact() {
             />
             <label htmlFor="name">Full Name</label>
           </div>
+
           <div className="input-group">
             <input
               type="email"
@@ -51,6 +52,7 @@ export default function Contact() {
             />
             <label htmlFor="email">Email Address</label>
           </div>
+
           <div className="input-group">
             <textarea
               id="message"
@@ -63,6 +65,7 @@ export default function Contact() {
             ></textarea>
             <label htmlFor="message">Your Message</label>
           </div>
+
           <button type="submit" className="btn-submit">
             Send Message
           </button>
