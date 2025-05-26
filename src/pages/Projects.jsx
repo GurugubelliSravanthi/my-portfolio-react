@@ -44,7 +44,7 @@ function Projects() {
                   <Card.Text>{project.description}</Card.Text>
                   <div className="project-tags">
                     {project.tags.map((tag, i) => (
-                      <Badge key={i} bg="primary" className="me-1">
+                      <Badge key={i} bg="pink-badge" className="me-1">
                         {tag}
                       </Badge>
                     ))}
