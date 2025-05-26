@@ -6,25 +6,26 @@ const skillSections = [
     title: "Programming Languages",
     image: "https://cdn-icons-png.flaticon.com/512/906/906324.png",
     skills: [
-      { name: 'Java', emoji: '☕', icon: 'https://cdn-icons-png.flaticon.com/512/226/226777.png' },
-      { name: 'Python', emoji: '🐍', icon: 'https://cdn-icons-png.flaticon.com/512/5968/5968350.png' },
-      { name: 'JavaScript', emoji: '✨', icon: 'https://cdn-icons-png.flaticon.com/512/5968/5968292.png' },
-      { name: 'SQL', emoji: '🧮', icon: 'https://cdn-icons-png.flaticon.com/512/2772/2772128.png' },
+      { name: 'Java',  icon: 'https://cdn-icons-png.flaticon.com/512/226/226777.png' },
+      { name: 'Python',  icon: 'https://cdn-icons-png.flaticon.com/512/5968/5968350.png' },
+      { name: 'JavaScript', icon: 'https://cdn-icons-png.flaticon.com/512/5968/5968292.png' },
+      { name: 'SQL', icon: 'https://cdn-icons-png.flaticon.com/512/2772/2772128.png' },
     ]
   },
   {
     title: "Frontend & Backend Tools",
     image: "https://cdn-icons-png.flaticon.com/512/1199/1199124.png",
     skills: [
-      { name: 'React', emoji: '⚛️', icon: 'https://cdn-icons-png.flaticon.com/512/919/919851.png' },
-      { name: 'HTML', emoji: '📄', icon: 'https://cdn-icons-png.flaticon.com/512/732/732212.png' },
-      { name: 'CSS', emoji: '🎨', icon: 'https://cdn-icons-png.flaticon.com/512/732/732190.png' },
-      { name: 'Git', emoji: '🔧', icon: 'https://cdn-icons-png.flaticon.com/512/919/919831.png' },
-      { name: 'GitHub', emoji: '🐙', icon: 'https://cdn-icons-png.flaticon.com/512/733/733553.png' },
-      { name: 'Postman', emoji: '📬', icon: 'https://seeklogo.com/images/P/postman-logo-0087CA0D15-seeklogo.com.png' },
-      { name: 'Spring Boot', emoji: '🌱', icon: 'https://cdn-icons-png.flaticon.com/512/5968/5968750.png' },
+      { name: 'React',  icon: 'https://cdn-icons-png.flaticon.com/512/919/919851.png' },
+      { name: 'HTML',  icon: 'https://cdn-icons-png.flaticon.com/512/732/732212.png' },
+      { name: 'CSS', icon: 'https://cdn-icons-png.flaticon.com/512/732/732190.png' },
+      { name: 'Git', icon: 'https://cdn-icons-png.flaticon.com/512/919/919831.png' },
+      { name: 'GitHub',  icon: 'https://cdn-icons-png.flaticon.com/512/733/733553.png' },
+      { name: 'Postman', icon: 'https://seeklogo.com/images/P/postman-logo-0087CA0D15-seeklogo.com.png' },
+      { name: 'Spring Boot',  icon: 'https://cdn-icons-png.flaticon.com/512/5968/5968750.png' },
     ]
   },
+  
   {
     title: "Databases & DevOps",
     image: "https://cdn-icons-png.flaticon.com/512/4248/4248443.png",
