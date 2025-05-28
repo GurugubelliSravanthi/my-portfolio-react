@@ -1,39 +1,58 @@
 import React from 'react';
 import './Skills.css';
+import {
+  FaJava, FaPython, FaJs, FaReact, FaHtml5, FaCss3Alt,
+  FaGitAlt, FaGithub, FaDatabase, FaGitlab, FaTerminal, FaTools
+} from 'react-icons/fa';
+import {
+  SiSpringboot, SiPostman, SiMongodb, SiMysql, SiVercel, SiMacos
+} from 'react-icons/si';
+import { VscCode } from 'react-icons/vsc';
 
 const skillSections = [
   {
     title: "Programming Languages",
-    image: "https://cdn-icons-png.flaticon.com/512/906/906324.png",
+    icon: <FaDatabase className="section-icon" style={{ color: '#f0db4f' }} />,
     skills: [
-      { name: 'Java',  icon: 'https://cdn-icons-png.flaticon.com/512/226/226777.png' },
-      { name: 'Python',  icon: 'https://cdn-icons-png.flaticon.com/512/5968/5968350.png' },
-      { name: 'JavaScript', icon: 'https://cdn-icons-png.flaticon.com/512/5968/5968292.png' },
-      { name: 'SQL', icon: 'https://cdn-icons-png.flaticon.com/512/2772/2772128.png' },
-    ]
+      { name: 'Java', icon: <FaJava className="skill-icon" style={{ color: '#007396' }} /> },
+      { name: 'Python', icon: <FaPython className="skill-icon" style={{ color: '#3776AB' }} /> },
+      { name: 'JavaScript', icon: <FaJs className="skill-icon" style={{ color: '#f0db4f' }} /> },
+    ],
   },
   {
     title: "Frontend & Backend Tools",
-    image: "https://cdn-icons-png.flaticon.com/512/1199/1199124.png",
+    icon: <FaReact className="section-icon" style={{ color: '#61DBFB' }} />,
     skills: [
-      { name: 'React',  icon: 'https://cdn-icons-png.flaticon.com/512/919/919851.png' },
-      { name: 'HTML',  icon: 'https://cdn-icons-png.flaticon.com/512/732/732212.png' },
-      { name: 'CSS', icon: 'https://cdn-icons-png.flaticon.com/512/732/732190.png' },
-      { name: 'Git', icon: 'https://cdn-icons-png.flaticon.com/512/919/919831.png' },
-      { name: 'GitHub',  icon: 'https://cdn-icons-png.flaticon.com/512/733/733553.png' },
-      { name: 'Postman', icon: 'https://seeklogo.com/images/P/postman-logo-0087CA0D15-seeklogo.com.png' },
-      { name: 'Spring Boot',  icon: 'https://cdn-icons-png.flaticon.com/512/5968/5968750.png' },
-    ]
+      { name: 'React', icon: <FaReact className="skill-icon" style={{ color: '#61DBFB' }} /> },
+      { name: 'HTML', icon: <FaHtml5 className="skill-icon" style={{ color: '#E34F26' }} /> },
+      { name: 'CSS', icon: <FaCss3Alt className="skill-icon" style={{ color: '#1572B6' }} /> },
+      { name: 'Git', icon: <FaGitAlt className="skill-icon" style={{ color: '#F05032' }} /> },
+      { name: 'GitHub', icon: <FaGithub className="skill-icon" style={{ color: '#181717' }} /> },
+      { name: 'Postman', icon: <SiPostman className="skill-icon" style={{ color: '#FF6C37' }} /> },
+      { name: 'Spring Boot', icon: <SiSpringboot className="skill-icon" style={{ color: '#6DB33F' }} /> },
+    ],
   },
-  
   {
-    title: "Databases & DevOps",
-    image: "https://cdn-icons-png.flaticon.com/512/4248/4248443.png",
+    title: "Databases",
+    icon: <FaDatabase className="section-icon" style={{ color: '#4479A1' }} />,
     skills: [
-      { name: 'MySQL', emoji: '🐬', icon: 'https://cdn-icons-png.flaticon.com/512/528/528260.png' },
-      { name: 'MongoDB', emoji: '🍃', icon: 'https://cdn-icons-png.flaticon.com/512/5968/5968342.png' },
-    ]
-  }
+      { name: 'MySQL', icon: <SiMysql className="skill-icon" style={{ color: '#4479A1' }} /> },
+      { name: 'MongoDB', icon: <SiMongodb className="skill-icon" style={{ color: '#47A248' }} /> },
+    ],
+  },
+  {
+    title: "Tools and Platforms",
+    icon: <FaTools className="section-icon" style={{ color: '#4B0082' }} />,
+    skills: [
+      { name: 'Git', icon: <FaGitAlt className="skill-icon" style={{ color: '#F05032' }} /> },
+      { name: 'GitHub', icon: <FaGithub className="skill-icon" style={{ color: '#181717' }} /> },
+      { name: 'GitLab', icon: <FaGitlab className="skill-icon" style={{ color: '#FC6D26' }} /> },
+      { name: 'Terminal', icon: <FaTerminal className="skill-icon" style={{ color: '#000000' }} /> },
+      { name: 'VS Code', icon: <VscCode className="skill-icon" style={{ color: '#007ACC' }} /> },
+      { name: 'Vercel', icon: <SiVercel className="skill-icon" style={{ color: '#000000' }} /> },
+      { name: 'macOS', icon: <SiMacos className="skill-icon" style={{ color: '#000000' }} /> },
+    ],
+  },
 ];
 
 const Skills = () => {
@@ -42,14 +61,14 @@ const Skills = () => {
       {skillSections.map((section, idx) => (
         <div className="skill-section" key={idx}>
           <div className="section-header">
-            <img src={section.image} alt={section.title} className="section-icon" />
+            {section.icon}
             <h2>{section.title}</h2>
           </div>
           <div className="skill-grid">
             {section.skills.map((skill, index) => (
               <div className="skill-card" key={index}>
-                <img src={skill.icon} alt={skill.name} className="skill-icon" />
-                <h3>{skill.emoji} {skill.name}</h3>
+                {skill.icon}
+                <h3>{skill.name}</h3>
               </div>
             ))}
           </div>
