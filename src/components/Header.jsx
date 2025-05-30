@@ -27,6 +27,7 @@ function Header() {
 
   const navItems = [
     { name: 'Home', icon: HiHome, path: '/' },
+    { name: 'About', icon: HiUser, path: '/about' },
     { name: 'Skills', icon: HiUser, path: '/skills' },
     { name: 'Projects', icon: HiCollection, path: '/projects' },
     { name: 'Contact', icon: HiMail, path: '/contact' }

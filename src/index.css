@@ -1,19 +1,14 @@
+
+/* index.css or App.css */
 html,
 body,
 #root {
   height: 100%;
-  width: 100%;
+  overflow-y: auto;
   margin: 0;
   padding: 0;
-  overflow: hidden;
 }
 
-#tsparticles {
-  position: fixed !important;
-  top: 0;
-  left: 0;
-  z-index: -1 !important;
-  width: 100% !important;
-  height: 100% !important;
-  pointer-events: none;
+html {
+  scroll-behavior: smooth;
 }
