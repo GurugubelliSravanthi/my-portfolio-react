@@ -1,109 +1,105 @@
-import { Container, Row, Col, Card, Badge } from 'react-bootstrap';
-import './Projects.css';
+import React from "react";
+import { Container, Row, Col, Card, Button } from "react-bootstrap";
+import "./Projects.css";
+// Import your project images (you'll need to add these)
+import PortfolioImg from "../assets/portfolio.png";
+// import ResumeBuilderImg from "../assets/resume-builder.jpg";
+import CarocartImg from "../assets/carocart.png";
+// import SmartPondImg from "../assets/smart-pond.jpg";
 
 const projects = [
   {
-    title: "Smartpond Monitoring System",
-    description: "An IoT-based water monitoring system for aquaculture with real-time sensors, live dashboards, and intelligent analytics for optimal fish farming.",
-    tags: ["IoT", "React", "Node.js", "Firebase"],
-    image: "https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=400&h=250&fit=crop&crop=center",
-    category: "IoT & Hardware",
-    status: "Live"
-  },
-  {
-    title: "Resume Builder Pro",
-    description: "Professional resume builder with multiple templates, real-time preview, PDF export, and ATS-friendly formatting for job seekers.",
-    tags: ["React", "HTML", "CSS", "jsPDF"],
-    image: "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=400&h=250&fit=crop&crop=center",
-    category: "Web Application",
-    status: "Featured"
-  },
-  {
+    id: 1,
     title: "Personal Portfolio",
-    description: "Modern developer portfolio with responsive design, smooth animations, and interactive elements showcasing skills and projects.",
-    tags: ["React", "Bootstrap", "Routing"],
-    image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=400&h=250&fit=crop&crop=center",
-    category: "Portfolio",
-    status: "Live"
+    description:
+      "A responsive personal portfolio website built with React and Bootstrap. Features include project showcases, skills section, contact form, and dark/light mode toggle. Designed to showcase my work and skills effectively.",
+    imageUrl: PortfolioImg,
+    link: "#",
   },
   {
-    title: "Caro Cart E-commerce",
-    description: "Full-stack e-commerce platform with secure authentication, payment integration, inventory management, and admin dashboard.",
-    tags: ["React", "Spring Boot", "MySQL", "JWT"],
-    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=250&fit=crop&crop=center",
-    category: "E-commerce",
-    status: "In Progress"
+    id: 2,
+    title: "Resume Builder",
+    description:
+      "An interactive web application that helps users create professional resumes quickly. Features include multiple templates, real-time preview, PDF export functionality, and form validation.",
+    // imageUrl: ResumeBuilderImg,
+    link: "#",
+  },
+  {
+    id: 3,
+    title: "Carocart E-commerce",
+    description:
+      "A full-stack e-commerce platform with product listings, shopping cart, user authentication, and payment integration. Built with React, Node.js, and MongoDB.",
+    imageUrl: CarocartImg,
+    link: "#",
+  },
+  {
+    id: 4,
+    title: "Smart Pond Monitoring System",
+    description:
+      "IoT-based solution for monitoring pond conditions including water quality, temperature, and pH levels. Features real-time data visualization, alerts, and remote monitoring capabilities.",
+    // imageUrl: SmartPondImg,
+    link: "#",
   },
 ];
 
-function Projects() {
+const Projects = () => {
   return (
-    <section className="projects-section" id="projects">
-      <div className="background-overlay"></div>
-      <Container>
-        <div className="section-header">
-          <div className="section-badge">
-            ⭐ Featured Work
-          </div>
-          <h2 className="section-title">My Creative Projects</h2>
-          <p className="section-subtitle">
-            Explore my latest work and creative solutions that showcase my passion for development
-          </p>
-        </div>
-
-        <Row className="g-4">
-          {projects.map((project, index) => (
-            <Col lg={6} key={index}>
-              <Card className="project-card">
-                <div className="project-image-container">
-                  <img 
-                    src={project.image} 
-                    alt={project.title}
-                    className="project-image"
-                  />
-                  <div className="image-overlay">
-                    <div className="overlay-content">
-                      <button className="preview-btn">
-                        👁️ Preview
-                      </button>
-                    </div>
-                  </div>
-                  <div className="project-status">
-                    <span className={`status-badge ${project.status.toLowerCase().replace(' ', '-')}`}>
-                      {project.status}
-                    </span>
-                  </div>
-                </div>
-
-                <Card.Body className="project-body">
-                  <div className="project-category">{project.category}</div>
-                  <h3 className="project-title">{project.title}</h3>
-                  <p className="project-description">{project.description}</p>
-                  
-                  <div className="project-tags">
-                    {project.tags.map((tag, i) => (
-                      <Badge key={i} className="tech-tag">
-                        {tag}
-                      </Badge>
-                    ))}
-                  </div>
-                  
-                  <div className="project-actions">
-                    <button className="action-btn primary-btn">
-                      🔗 Live Demo
-                    </button>
-                    <button className="action-btn secondary-btn">
-                      💻 Source Code
-                    </button>
-                  </div>
-                </Card.Body>
-              </Card>
-            </Col>
-          ))}
-        </Row>
-      </Container>
-    </section>
+    <Container className="projects-container">
+      <Row>
+        <Col className="text-center">
+          <h2 className="projects-title">My Projects</h2>
+        </Col>
+      </Row>
+      <Row className="project-row">
+        {projects.slice(0, 2).map((project) => (
+          <Col
+            md={6}
+            key={project.id}
+            className="d-flex align-items-stretch mb-4"
+          >
+            <Card className="project-card">
+              <Card.Img
+                variant="top"
+                src={project.imageUrl}
+                className="card-img-top"
+              />
+              <Card.Body>
+                <Card.Title>{project.title}</Card.Title>
+                <Card.Text>{project.description}</Card.Text>
+                <Button href={project.link} target="_blank">
+                  View Project
+                </Button>
+              </Card.Body>
+            </Card>
+          </Col>
+        ))}
+      </Row>
+      <Row className="project-row">
+        {projects.slice(2, 4).map((project) => (
+          <Col
+            md={6}
+            key={project.id}
+            className="d-flex align-items-stretch mb-4"
+          >
+            <Card className="project-card">
+              <Card.Img
+                variant="top"
+                src={project.imageUrl}
+                className="card-img-top"
+              />
+              <Card.Body>
+                <Card.Title>{project.title}</Card.Title>
+                <Card.Text>{project.description}</Card.Text>
+                <Button href={project.link} target="_blank">
+                  View Project
+                </Button>
+              </Card.Body>
+            </Card>
+          </Col>
+        ))}
+      </Row>
+    </Container>
   );
-}
+};
 
 export default Projects;
