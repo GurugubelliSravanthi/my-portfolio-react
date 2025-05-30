@@ -14,7 +14,7 @@ import './Header.css';
 
 function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [expanded, setExpanded] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -32,88 +32,52 @@ function Header() {
     { name: 'Contact', icon: HiMail, path: '/contact' }
   ];
 
-  const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
+  const toggleNavbar = () => {
+    setExpanded(!expanded);
   };
 
-  const closeMobileMenu = () => {
-    setIsMobileMenuOpen(false);
+  const closeNavbar = () => {
+    setExpanded(false);
   };
 
   return (
-    <>
-      <Navbar
-        expand="lg"
-        fixed="top"
-        className={`custom-navbar ${isScrolled ? 'scrolled' : ''}`}
-      >
-        <Container>
-          <Navbar.Brand as={Link} to="/" className="brand-logo">
-            <span className="brand-name">SG</span>
-          </Navbar.Brand>
+    <Navbar
+      expand="lg"
+      fixed="top"
+      expanded={expanded}
+      className={`custom-navbar ${isScrolled ? 'scrolled' : ''}`}
+    >
+      <Container>
+        <Navbar.Brand as={Link} to="/" className="brand-logo">
+          <span className="brand-name">SG</span>
+        </Navbar.Brand>
 
-          <button
-            className="mobile-toggle d-lg-none"
-            onClick={toggleMobileMenu}
-            aria-label="Toggle navigation"
-          >
-            {isMobileMenuOpen ? <HiX /> : <HiMenu />}
-          </button>
+        <Navbar.Toggle 
+          aria-controls="basic-navbar-nav" 
+          onClick={toggleNavbar}
+          className="d-lg-none"
+        >
+          {expanded ? <HiX /> : <HiMenu />}
+        </Navbar.Toggle>
 
-          <Navbar.Collapse id="navbar-nav" className="d-none d-lg-block">
-            <Nav className="ms-auto">
-              {navItems.map((item) => (
-                <Nav.Link
-                  key={item.name}
-                  as={Link}
-                  to={item.path}
-                  className="nav-item"
-                >
-                  <item.icon className="nav-icon" />
-                  <span className="nav-text">{item.name}</span>
-                </Nav.Link>
-              ))}
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
-
-      {/* Mobile Menu Overlay */}
-      <div className={`mobile-menu-overlay ${isMobileMenuOpen ? 'active' : ''}`}>
-        <div className={`mobile-menu ${isMobileMenuOpen ? 'open' : ''}`}>
-          <div className="mobile-menu-header">
-            <div className="brand-logo">
-              <div className="brand-icon">
-                <HiSparkles />
-              </div>
-              <span className="brand-name">Sravanthi</span>
-              <span className="brand-highlight">Gurugubelli</span>
-            </div>
-            <button
-              className="mobile-close"
-              onClick={closeMobileMenu}
-              aria-label="Close menu"
-            >
-              <HiX />
-            </button>
-          </div>
-
-          <div className="mobile-nav-links">
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="ms-auto">
             {navItems.map((item) => (
-              <Link
+              <Nav.Link
                 key={item.name}
+                as={Link}
                 to={item.path}
-                className="mobile-nav-item"
-                onClick={closeMobileMenu}
+                className="nav-item"
+                onClick={closeNavbar}
               >
-                <item.icon className="mobile-nav-icon" />
-                <span>{item.name}</span>
-              </Link>
+                <item.icon className="nav-icon" />
+                <span className="nav-text">{item.name}</span>
+              </Nav.Link>
             ))}
-          </div>
-        </div>
-      </div>
-    </>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 }
 
