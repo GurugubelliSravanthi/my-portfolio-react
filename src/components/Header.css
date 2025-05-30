@@ -1,34 +1,21 @@
-/* Import Poppins font */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-
-/* Root Variables for Pink Theme */
+/* Updated Root Variables for Navy Blue Theme */
 :root {
-  --pink-bg: #d289a8;
-  --pink-dark: #b03060;
-  --pink-mid: #f9c5d5;
-  --pink-light: #ffe3ec;
-  --pink-accent: #e75480;
-  --text-dark: #4a0d26;
-  --text-light: #fff0f5;
+  --navy-bg: #1a365d;
+  --navy-dark: #0a192f;
+  --navy-mid: #172a45;
+  --navy-light: #2c5282;
+  --navy-accent: #3b82f6;
+  --text-dark: #f8fafc;
+  --text-light: #e2e8f0;
   --white: #ffffff;
-  --shadow: rgba(204, 102, 153, 0.1);
-  --border: rgba(255, 192, 203, 0.2);
+  --shadow: rgba(30, 64, 175, 0.1);
+  --border: rgba(59, 130, 246, 0.2);
+  --hover-glow: rgba(59, 130, 246, 0.3);
 }
 
-/* Global Font and Reset */
-body {
-  font-family: 'Poppins', sans-serif;
-  margin: 0;
-  padding: 0;
-  color: var(--text-dark);
-  background-color: var(--pink-light);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-/* Navbar base */
+/* Base Navbar Styles */
 .custom-navbar {
-  background-color: var(--pink-bg);
+  background-color: var(--navy-bg);
   transition: all 0.3s ease;
   padding: 0.8rem 1rem;
   border-bottom: 1px solid var(--border);
@@ -37,183 +24,130 @@ body {
 
 .custom-navbar.scrolled {
   box-shadow: 0 4px 12px var(--shadow);
-  background-color: #fddce8;
+  background-color: rgba(23, 42, 69, 0.95);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
 }
 
-/* Brand styling */
+/* Brand Styling */
 .brand-logo {
   display: flex;
   align-items: center;
   font-size: 1.4rem;
   font-weight: 600;
   color: var(--text-dark);
+  transition: transform 0.3s ease;
 }
 
-.brand-icon {
-  font-size: 1.5rem;
-  margin-right: 0.4rem;
-  color: var(--pink-accent);
+.brand-logo:hover {
+  transform: scale(1.05);
 }
 
 .brand-name {
-  color: var(--text-dark);
+  color: var(--white);
 }
 
-.brand-highlight {
-  margin-left: 6px;
-  color: var(--pink-accent);
-  font-weight: 700;
-}
-
-/* Desktop Nav */
+/* Desktop Nav Items */
 .nav-item {
   display: flex;
   align-items: center;
   color: var(--text-dark) !important;
-  font-weight: 500;
+  font-weight: 900 !important;
   margin-left: 1.2rem;
-  transition: color 0.3s;
+  transition: all 0.3s ease;
   font-size: 1rem;
+  position: relative;
+  padding: 0.5rem 0;
 }
 
 .nav-item:hover {
-  color: var(--pink-accent) !important;
+  color: var(--navy-accent) !important;
+}
+
+.nav-item::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--navy-accent);
+  transition: width 0.3s ease;
+}
+
+.nav-item:hover::after {
+  width: 100%;
 }
 
 .nav-icon {
   margin-right: 0.5rem;
   font-size: 1.2rem;
+  transition: transform 0.3s ease;
 }
 
-/* Hire Me Button */
-.hire-me-btn {
-  background-color: var(--pink-mid);
-  color: var(--text-dark) !important;
-  font-weight: 600;
-  padding: 0.5rem 1rem;
-  margin-left: 1.5rem;
-  border-radius: 20px;
-  display: flex;
-  align-items: center;
-  transition: background-color 0.3s ease, transform 0.2s;
-  font-size: 0.95rem;
-}
-
-.hire-me-btn:hover {
-  background-color: var(--pink-accent);
-  color: var(--text-light) !important;
+.nav-item:hover .nav-icon {
   transform: translateY(-2px);
+  color: var(--navy-accent);
 }
 
-.hire-icon {
-  margin-right: 0.5rem;
-}
-
-/* Mobile Toggle */
-.mobile-toggle {
-  background: none;
+/* Mobile Toggle Button */
+.navbar-toggler {
   border: none;
-  font-size: 1.6rem;
-  color: var(--pink-dark);
-  cursor: pointer;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  color: var(--white) !important; /* White color for hamburger */
+  background: transparent !important;
+  outline: none !important;
+  box-shadow: none !important;
 }
 
-/* Mobile Overlay */
-.mobile-menu-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 192, 203, 0.15);
-  z-index: 998;
-  display: none;
-  transition: all 0.3s ease;
+.navbar-toggler:focus {
+  outline: none;
+  box-shadow: none;
 }
 
-.mobile-menu-overlay.active {
-  display: block;
+/* Mobile Menu Styles */
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    background-color: var(--navy-mid);
+    border-top: 1px solid var(--border);
+    box-shadow: 0 4px 12px var(--shadow);
+    z-index: 998;
+  }
+
+  .nav {
+    flex-direction: column;
+  }
+
+  .nav-item {
+    margin-left: 0;
+    padding: 0.8rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .nav-item:last-child {
+    border-bottom: none;
+  }
+
+  .nav-icon {
+    font-size: 1.3rem;
+  }
 }
 
-/* Mobile Menu */
-.mobile-menu {
-  position: fixed;
-  top: 0;
-  right: -100%;
-  width: 280px;
-  height: 100%;
-  background-color: var(--pink-light);
-  box-shadow: -2px 0 8px rgba(255, 182, 193, 0.3);
-  z-index: 999;
-  padding: 1.5rem 1rem;
-  transition: right 0.3s ease;
-  display: flex;
-  flex-direction: column;
+/* Desktop Styles */
+@media (min-width: 992px) {
+  .navbar-collapse {
+    display: flex !important;
+    flex-basis: auto;
+  }
 }
 
-.mobile-menu.open {
-  right: 0;
-}
-
-/* Mobile Header */
-.mobile-menu-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 2rem;
-}
-
-.mobile-close {
-  background: none;
-  border: none;
-  font-size: 1.6rem;
-  color: var(--pink-dark);
-  cursor: pointer;
-}
-
-/* Mobile nav links */
-.mobile-nav-links {
-  display: flex;
-  flex-direction: column;
-  gap: 1.2rem;
-}
-
-.mobile-nav-item {
-  display: flex;
-  align-items: center;
-  font-size: 1.1rem;
-  color: var(--text-dark);
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-.mobile-nav-item:hover {
-  color: var(--pink-accent);
-}
-
-.mobile-nav-icon {
-  margin-right: 0.6rem;
-  font-size: 1.3rem;
-}
-
-/* Mobile Hire Me */
-.mobile-hire-btn {
-  background-color: var(--pink-mid);
-  padding: 0.6rem 1.2rem;
-  border-radius: 25px;
-  text-align: center;
-  color: var(--text-dark);
-  text-decoration: none;
-  font-weight: 600;
-  margin-top: 1rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
-  transition: background-color 0.3s ease;
-}
-
-.mobile-hire-btn:hover {
-  background-color: var(--pink-accent);
-  color: var(--text-light);
+/* Animation for mobile menu */
+.navbar-collapse.collapsing {
+  transition: height 0.3s ease;
 }
