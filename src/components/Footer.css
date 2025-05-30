@@ -1,10 +1,11 @@
-/* Footer Section Styles */
+/* Footer Section Styles - Navy Blue Theme */
 .footer-section {
-  background: linear-gradient(135deg, #f06292, #f8bbd0);
-  color: #fff0f6;
+  /* background: linear-gradient(135deg, #1e3a8a, #3b82f6); */
+  color: #e2e8f0;
   padding: 60px 20px 30px;
   font-family: 'Poppins', sans-serif;
-  box-shadow: 0 -8px 24px rgba(240, 98, 146, 0.3);
+  box-shadow: 0 -8px 24px rgba(30, 64, 175, 0.3);
+  -webkit-user-select: none;
   user-select: none;
 }
 
@@ -25,13 +26,13 @@
   font-size: 1.3rem;
   margin-bottom: 18px;
   color: #fff;
-  text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
 }
 
 /* Paragraph and Text */
 .footer-about p {
   line-height: 1.6;
-  color: #ffe1ec;
+  color: #cbd5e1;
   font-size: 1rem;
   max-width: 320px;
 }
@@ -50,24 +51,24 @@
   font-size: 1rem;
   cursor: pointer;
   transition: color 0.3s ease;
-  color: #ffe1ec;
+  color: #cbd5e1;
 }
 
 .footer-links ul li:hover,
 .footer-contact ul li:hover {
-  color: #ff4081;
+  color: #60a5fa;
 }
 
 /* Links in footer links */
 .footer-links ul li a {
-  color: #ffe1ec;
+  color: #cbd5e1;
   text-decoration: none;
   transition: color 0.3s ease;
   display: inline-block;
 }
 
 .footer-links ul li a:hover {
-  color: #ff4081;
+  color: #60a5fa;
   text-decoration: underline;
 }
 
@@ -89,14 +90,14 @@
   border-radius: 50%;
   transition: background 0.3s ease, transform 0.3s ease;
   text-decoration: none;
-  box-shadow: 0 4px 12px rgba(240, 98, 146, 0.25);
+  box-shadow: 0 4px 12px rgba(30, 64, 175, 0.25);
 }
 
 .footer-social .social-icons a:hover {
-  background: #ff80ab;
+  background: #2563eb;
   color: #fff;
   transform: scale(1.15);
-  box-shadow: 0 8px 20px rgba(255, 128, 171, 0.6);
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.4);
 }
 
 /* Footer Bottom Text */
@@ -104,9 +105,10 @@
   text-align: center;
   margin-top: 25px;
   font-size: 0.9rem;
-  color: #ffd5ea;
+  color: #93c5fd;
   font-weight: 500;
   letter-spacing: 0.03em;
+  -webkit-user-select: text;
   user-select: text;
 }
 
