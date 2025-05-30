@@ -1,3 +1,4 @@
+/* Main Skills Page */
 .skills-page {
   background-color: #ffe4ec;
   padding: 60px 20px;
@@ -7,6 +8,7 @@
   align-items: center;
 }
 
+/* Skill Section */
 .skill-section {
   padding: 80px 30px;
   background: transparent;
@@ -15,6 +17,7 @@
   max-width: 1200px;
 }
 
+/* Section Header */
 .section-header {
   display: flex;
   align-items: center;
@@ -33,9 +36,12 @@
 }
 
 .section-icon {
-  font-size: 3rem;
-  filter: drop-shadow(0 0 4px rgba(255, 105, 180, 0.7));
+  font-size: 4rem;
+  color: #ff69b4;
+  filter: drop-shadow(0 0 6px rgba(255, 105, 180, 0.8));
 }
+
+/* Skill Grid */
 .skill-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -45,41 +51,45 @@
   align-items: center;
 }
 
+/* Transparent Skill Cards */
 .skill-card {
-  background: linear-gradient(135deg, rgba(255, 192, 203, 0.25), rgba(255, 182, 193, 0.15));
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 25px;
   padding: 30px 15px;
   text-align: center;
-  transition: all 0.5s ease;
+  transition: all 0.3s ease;
   width: 100%;
-  box-shadow: inset 0 0 10px rgba(255, 182, 193, 0.6), 0 8px 30px rgba(255, 105, 180, 0.3);
-  backdrop-filter: blur(12px);
-  border: 1.5px solid rgba(255, 105, 180, 0.3);
+  box-shadow: 0 8px 32px rgba(255, 105, 180, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   cursor: pointer;
 }
 
 .skill-card:hover {
   transform: translateY(-10px) scale(1.05);
-  background: linear-gradient(135deg, rgba(255, 105, 180, 0.25), rgba(255, 105, 180, 0.15));
-  border-color: #ff1493;
-  box-shadow: 0 0 30px 8px rgba(255, 105, 180, 0.6), inset 0 0 15px rgba(255, 20, 147, 0.7);
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 20, 147, 0.4);
+  box-shadow: 0 0 30px 8px rgba(255, 105, 180, 0.3), 
+              0 16px 40px rgba(255, 105, 180, 0.2);
   animation: pulseGlow 2.5s infinite alternate ease-in-out;
 }
 
 @keyframes pulseGlow {
   0% {
-    box-shadow: 0 0 30px 8px rgba(255, 105, 180, 0.5), inset 0 0 15px rgba(255, 20, 147, 0.6);
+    box-shadow: 0 0 30px 8px rgba(255, 105, 180, 0.2), 
+                0 16px 40px rgba(255, 105, 180, 0.1);
   }
-
   100% {
-    box-shadow: 0 0 40px 12px rgba(255, 105, 180, 0.8), inset 0 0 20px rgba(255, 20, 147, 0.9);
+    box-shadow: 0 0 40px 12px rgba(255, 105, 180, 0.4), 
+                0 20px 50px rgba(255, 105, 180, 0.2);
   }
 }
 
+/* Skill Icons */
 .skill-icon {
-  font-size: 4rem;
-  margin-bottom: 20px;
-  filter: drop-shadow(0 0 7px rgba(0, 0, 0, 0.1));
+  font-size: 6rem;
+  margin-bottom: 25px;
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.2));
   transition: filter 0.4s ease;
 }
 
@@ -87,14 +97,67 @@
   filter: drop-shadow(0 0 12px rgba(255, 105, 180, 0.9));
 }
 
+/* Individual Icon Colors */
+.skill-icon.java { color: #f89820; }
+.skill-icon.python { color: #3776ab; }
+.skill-icon.javascript { color: #f7df1e; }
+.skill-icon.react { color: #61dafb; }
+.skill-icon.html { color: #e34f26; }
+.skill-icon.css { color: #1572b6; }
+.skill-icon.git { color: #f05032; }
+.skill-icon.github { color: #333; }
+.skill-icon.postman { color: #ff6c37; }
+.skill-icon.springboot { color: #6db33f; }
+.skill-icon.mysql { color: #4479a1; }
+.skill-icon.mongodb { color: #47a248; }
+.skill-icon.gitlab { color: #fc6d26; }
+.skill-icon.terminal { color: #4a4a4a; }
+.skill-icon.vscode { color: #007acc; }
+.skill-icon.vercel { color: #000; }
+.skill-icon.macos { color: #000; }
+
+/* Skill Names */
 .skill-card h3 {
   font-size: 1.6rem;
   font-weight: 700;
   color: #4a004a;
   text-shadow: 1px 1px 3px rgba(255, 105, 180, 0.8);
   transition: color 0.4s ease;
+  margin: 0;
 }
 
 .skill-card:hover h3 {
   color: #ff1493;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .skills-page {
+    padding: 40px 15px;
+  }
+  
+  .skill-section {
+    padding: 60px 20px;
+  }
+  
+  .section-header h2 {
+    font-size: 2rem;
+  }
+  
+  .section-icon {
+    font-size: 3.5rem;
+  }
+  
+  .skill-icon {
+    font-size: 4.5rem;
+  }
+  
+  .skill-card h3 {
+    font-size: 1.4rem;
+  }
+  
+  .skill-grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+  }
 }
