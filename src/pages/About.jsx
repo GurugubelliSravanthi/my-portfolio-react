@@ -16,18 +16,19 @@ import {
 import { HiOutlineLightBulb, HiOutlineSparkles } from 'react-icons/hi';
 import { BsFileEarmarkPdf, BsPerson, BsAward } from 'react-icons/bs';
 import { SiSpringboot, SiMongodb, SiMysql } from 'react-icons/si';
+import SG from '../assets/SG Resume.pdf';
 
 const About = () => {
   const handleViewResume = () => {
-    // Replace with your actual resume URL
-    window.open('/path-to-your-resume.pdf', '_blank');
+    window.open("/SG Resume.pdf", "_blank");
   };
+  
 
   const handleDownloadResume = () => {
     // Replace with your actual resume file path
     const link = document.createElement('a');
-    link.href = '/path-to-your-resume.pdf';
-    link.download = 'YourName_Resume.pdf';
+    link.href = '/SG Resume.pdf'; // Path to your resume file
+    link.download = 'Sravanthi_Resume.pdf';
     link.click();
   };
 
@@ -128,18 +129,7 @@ const About = () => {
                   Comprehensive documentation of my technical expertise, project portfolio, 
                   academic achievements, and professional experience in software development.
                 </p>
-                
-                <div className="resume-stats">
-                  <div className="stat-item">
-                    <span className="stat-number">15+</span>
-                    <span className="stat-label">Projects</span>
-                  </div>
-                  <div className="stat-item">
-                    <span className="stat-number">5+</span>
-                    <span className="stat-label">Technologies</span>
-                  </div>
-                </div>
-                
+
                 <div className="resume-actions">
                   <button 
                     className="resume-btn view-btn"
