@@ -1,79 +1,123 @@
-import React from 'react';
-import './Skills.css';
+import React from "react";
 import {
-  FaJava, FaPython, FaJs, FaReact, FaHtml5, FaCss3Alt,
-  FaGitAlt, FaGithub, FaDatabase, FaGitlab, FaTerminal, FaTools
-} from 'react-icons/fa';
+  FaHtml5,
+  FaCss3Alt,
+  FaJs,
+  FaReact,
+  FaPython,
+  FaJava,
+  FaGitAlt,
+  FaBootstrap,
+} from "react-icons/fa";
 import {
-  SiSpringboot, SiPostman, SiMongodb, SiMysql, SiVercel, SiMacos
-} from 'react-icons/si';
-import { VscCode } from 'react-icons/vsc';
-
-const skillSections = [
-  {
-    title: "Programming Languages",
-    icon: <FaDatabase className="section-icon" style={{ color: '#f0db4f' }} />,
-    skills: [
-      { name: 'Java', icon: <FaJava className="skill-icon" style={{ color: '#007396' }} /> },
-      { name: 'Python', icon: <FaPython className="skill-icon" style={{ color: '#3776AB' }} /> },
-      { name: 'JavaScript', icon: <FaJs className="skill-icon" style={{ color: '#f0db4f' }} /> },
-    ],
-  },
-  {
-    title: "Frontend & Backend Tools",
-    icon: <FaReact className="section-icon" style={{ color: '#61DBFB' }} />,
-    skills: [
-      { name: 'React', icon: <FaReact className="skill-icon" style={{ color: '#61DBFB' }} /> },
-      { name: 'HTML', icon: <FaHtml5 className="skill-icon" style={{ color: '#E34F26' }} /> },
-      { name: 'CSS', icon: <FaCss3Alt className="skill-icon" style={{ color: '#1572B6' }} /> },
-      { name: 'Git', icon: <FaGitAlt className="skill-icon" style={{ color: '#F05032' }} /> },
-      { name: 'GitHub', icon: <FaGithub className="skill-icon" style={{ color: '#181717' }} /> },
-      { name: 'Postman', icon: <SiPostman className="skill-icon" style={{ color: '#FF6C37' }} /> },
-      { name: 'Spring Boot', icon: <SiSpringboot className="skill-icon" style={{ color: '#6DB33F' }} /> },
-    ],
-  },
-  {
-    title: "Databases",
-    icon: <FaDatabase className="section-icon" style={{ color: '#4479A1' }} />,
-    skills: [
-      { name: 'MySQL', icon: <SiMysql className="skill-icon" style={{ color: '#4479A1' }} /> },
-      { name: 'MongoDB', icon: <SiMongodb className="skill-icon" style={{ color: '#47A248' }} /> },
-    ],
-  },
-  {
-    title: "Tools and Platforms",
-    icon: <FaTools className="section-icon" style={{ color: '#4B0082' }} />,
-    skills: [
-      { name: 'Git', icon: <FaGitAlt className="skill-icon" style={{ color: '#F05032' }} /> },
-      { name: 'GitHub', icon: <FaGithub className="skill-icon" style={{ color: '#181717' }} /> },
-      { name: 'GitLab', icon: <FaGitlab className="skill-icon" style={{ color: '#FC6D26' }} /> },
-      { name: 'Terminal', icon: <FaTerminal className="skill-icon" style={{ color: '#000000' }} /> },
-      { name: 'VS Code', icon: <VscCode className="skill-icon" style={{ color: '#007ACC' }} /> },
-      { name: 'Vercel', icon: <SiVercel className="skill-icon" style={{ color: '#000000' }} /> },
-      { name: 'macOS', icon: <SiMacos className="skill-icon" style={{ color: '#000000' }} /> },
-    ],
-  },
-];
+  SiMongodb,
+  SiMysql,
+  SiPostman,
+  SiSpringboot,
+  SiVercel,
+  SiGitlab,
+} from "react-icons/si";
+import { DiApple } from "react-icons/di";
+import styles from "./Skills.module.css";
 
 const Skills = () => {
+  const skillCategories = [
+    {
+      category: "Programming Languages",
+      skills: [
+        { icon: <FaJs className={styles.jsIcon} />, title: "JavaScript" },
+        { icon: <FaPython className={styles.pythonIcon} />, title: "Python" },
+        { icon: <FaJava className={styles.javaIcon} />, title: "Java" },
+      ],
+    },
+    {
+      category: "Web Development",
+      skills: [
+        { icon: <FaHtml5 className={styles.htmlIcon} />, title: "HTML5" },
+        { icon: <FaCss3Alt className={styles.cssIcon} />, title: "CSS3" },
+        {
+          icon: <FaBootstrap className={styles.bootstrapIcon} />,
+          title: "Bootstrap",
+        },
+      ],
+    },
+    {
+      category: "Frameworks & Libraries",
+      skills: [
+        { icon: <FaReact className={styles.reactIcon} />, title: "React" },
+        {
+          icon: <SiSpringboot className={styles.springbootIcon} />,
+          title: "Spring Boot",
+        },
+      ],
+    },
+    {
+      category: "Databases",
+      skills: [
+        {
+          icon: <SiMongodb className={styles.mongodbIcon} />,
+          title: "MongoDB",
+        },
+        { icon: <SiMysql className={styles.mysqlIcon} />, title: "MySQL" },
+      ],
+    },
+    {
+      category: "Tools & Others",
+      skills: [
+        { icon: <FaGitAlt className={styles.gitIcon} />, title: "Git" },
+        {
+          icon: <SiPostman className={styles.postmanIcon} />,
+          title: "Postman",
+        },
+        { icon: <SiVercel className={styles.vercelIcon} />, title: "Vercel" },
+        { icon: <DiApple className={styles.appleIcon} />, title: "macOS" },
+        { icon: <SiGitlab className={styles.gitlabIcon} />, title: "GitLab" },
+      ],
+    },
+  ];
+
   return (
-    <div className="skills-page">
-      {skillSections.map((section, idx) => (
-        <div className="skill-section" key={idx}>
-          <div className="section-header">
-            {section.icon}
-            <h2>{section.title}</h2>
-          </div>
-          <div className="skill-grid">
-            {section.skills.map((skill, index) => (
-              <div className="skill-card" key={index}>
-                {skill.icon}
-                <h3>{skill.name}</h3>
-              </div>
-            ))}
-          </div>
+    <div className={styles.skillsPage}>
+      <div className={styles.skillsContainer}>
+        <div className={styles.sectionHeader}>
+          <h2 className={styles.sectionTitle}>My Skills</h2>
+          <div className={styles.titleUnderline}></div>
         </div>
-      ))}
+
+        <div className={styles.categoriesContainer}>
+          {skillCategories.map((category, categoryIndex) => (
+            <div
+              key={categoryIndex}
+              className={styles.categorySection}
+              style={{ animationDelay: `${categoryIndex * 0.2}s` }}
+            >
+              <h3 className={styles.categoryTitle}>{category.category}</h3>
+              <div className={styles.skillsGrid}>
+                {category.skills.map((skill, skillIndex) => (
+                  <div
+                    className={styles.skillCard}
+                    key={skillIndex}
+                    style={{
+                      animationDelay: `${
+                        categoryIndex * 0.2 + skillIndex * 0.1
+                      }s`,
+                    }}
+                  >
+                    <div className={styles.skillIcon}>{skill.icon}</div>
+                    <h4 className={styles.skillTitle}>{skill.title}</h4>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className={styles.floatingElements}>
+          {[1, 2, 3, 4].map((i) => (
+            <div key={i} className={styles.floatingCircle}></div>
+          ))}
+        </div>
+      </div>
     </div>
   );
 };
