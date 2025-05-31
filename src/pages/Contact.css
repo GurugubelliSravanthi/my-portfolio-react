@@ -1,136 +1,125 @@
-/* Entire contact section */
-.contact-section {
-  background: #ffe4ec;
-  /* soft light pink */
-  padding: 80px 20px;
-  min-height: 100vh;
+/* Footer Section Styles - Navy Blue Theme */
+.footer-section {
+  /* background: linear-gradient(135deg, #1e3a8a, #3b82f6); */
+  color: #e2e8f0;
+  padding: 60px 20px 30px;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 -8px 24px rgba(30, 64, 175, 0.3);
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* Container grid */
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Section Headings */
+.footer-container h3 {
+  font-weight: 700;
+  font-size: 1.3rem;
+  margin-bottom: 18px;
+  color: #fff;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
+}
+
+/* Paragraph and Text */
+.footer-about p {
+  line-height: 1.6;
+  color: #cbd5e1;
+  font-size: 1rem;
+  max-width: 320px;
+}
+
+/* Lists */
+.footer-links ul,
+.footer-contact ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links ul li,
+.footer-contact ul li {
+  margin-bottom: 14px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  color: #cbd5e1;
+}
+
+.footer-links ul li:hover,
+.footer-contact ul li:hover {
+  color: #60a5fa;
+}
+
+/* Links in footer links */
+.footer-links ul li a {
+  color: #cbd5e1;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  display: inline-block;
+}
+
+.footer-links ul li a:hover {
+  color: #60a5fa;
+  text-decoration: underline;
+}
+
+/* Social Icons */
+.footer-social .social-icons {
+  display: flex;
+  gap: 18px;
+}
+
+.footer-social .social-icons a {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  font-size: 1.6rem;
+  width: 44px;
+  height: 44px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border-radius: 50%;
+  transition: background 0.3s ease, transform 0.3s ease;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(30, 64, 175, 0.25);
 }
 
-/* Center container with max width */
-.contact-container {
-  background: white;
-  max-width: 600px;
-  width: 100%;
-  padding: 50px 40px;
-  border-radius: 25px;
-  box-shadow: 0 15px 40px rgba(255, 105, 180, 0.3);
-  border: 2px solid #ffb6c1;
+.footer-social .social-icons a:hover {
+  background: #2563eb;
+  color: #fff;
+  transform: scale(1.15);
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.4);
 }
 
-/* Title and subtitle */
-.contact-title {
-  font-size: 3rem;
-  font-weight: 700;
-  color: #b22255;
-  /* deep pink */
-  margin-bottom: 15px;
+/* Footer Bottom Text */
+.footer-bottom {
   text-align: center;
-  user-select: none;
-}
-
-.contact-subtitle {
-  font-size: 1.2rem;
-  color: #880e4f;
-  /* dark pinkish */
-  margin-bottom: 40px;
-  text-align: center;
-}
-
-/* Form Styles */
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-}
-
-/* Input group - for floating labels */
-.input-group {
-  position: relative;
-  width: 100%;
-}
-
-.input-group input,
-.input-group textarea {
-  width: 100%;
-  padding: 16px 16px 16px 14px;
-  font-size: 1rem;
-  border: 2px solid #ffb6c1;
-  border-radius: 12px;
-  background: #fff0f6;
-  color: #880e4f;
-  outline: none;
-  transition: border-color 0.3s ease;
+  margin-top: 25px;
+  font-size: 0.9rem;
+  color: #93c5fd;
   font-weight: 500;
-  resize: none;
+  letter-spacing: 0.03em;
+  -webkit-user-select: text;
+  user-select: text;
 }
 
-.input-group input:focus,
-.input-group textarea:focus {
-  border-color: #ff69b4;
-  box-shadow: 0 0 10px rgba(255, 105, 180, 0.6);
-}
-
-/* Floating label */
-.input-group label {
-  position: absolute;
-  top: 50%;
-  left: 16px;
-  color: #b22255;
-  font-size: 1rem;
-  pointer-events: none;
-  transform: translateY(-50%);
-  transition: 0.3s ease all;
-  background-color: transparent;
-  padding: 0 6px;
-  user-select: none;
-}
-
-.input-group input:focus+label,
-.input-group input:not(:placeholder-shown)+label,
-.input-group textarea:focus+label,
-.input-group textarea:not(:placeholder-shown)+label {
-  top: -12px;
-  left: 12px;
-  font-size: 0.8rem;
-  color: #d81b60;
-  background-color: #ffe4ec;
-  font-weight: 700;
-}
-
-/* Submit button */
-.btn-submit {
-  background: #ff69b4;
-  color: white;
-  border: none;
-  padding: 18px;
-  font-size: 1.3rem;
-  border-radius: 18px;
-  cursor: pointer;
-  font-weight: 700;
-  transition: background 0.3s ease, box-shadow 0.3s ease;
-  user-select: none;
-}
-
-.btn-submit:hover {
-  background: #ff1493;
-  box-shadow: 0 0 15px rgba(255, 20, 147, 0.7);
-}
-
-/* Responsive tweaks */
+/* Responsive Adjustments */
 @media (max-width: 600px) {
-  .contact-container {
-    padding: 40px 25px;
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
   }
 
-  .contact-title {
-    font-size: 2.4rem;
-  }
-
-  .contact-subtitle {
-    font-size: 1rem;
+  .footer-about p {
+    max-width: 100%;
   }
 }
