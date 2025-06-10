@@ -12,8 +12,8 @@ import StarsCanvas from './StarCanvas';
 function App() {
   return (
     <BrowserRouter>
-      <StarsCanvas />
-      <Header />
+{/*       <StarsCanvas />
+      <Header /> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
