@@ -44,12 +44,11 @@
   width: 100% !important;
   border-radius: 30px;
   background-color: transparent !important;
-  background: transparent !important;
   overflow: hidden;
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   box-shadow: 0 4px 5px 3px rgba(119, 53, 136, 0.459) !important;
-  backdrop-filter: blur(1px);
   -webkit-backdrop-filter: blur(1px);
+  backdrop-filter: blur(5px);
   margin-bottom: 2rem;
   color: #ffffff;
 }
