@@ -7,10 +7,19 @@ body {
 
 }
 
+
+
 .star-background {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 100%;
-  position: fixed;
-  inset: 0;
   z-index: -1;
+  pointer-events: none;
+}
+
+canvas {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
 }
