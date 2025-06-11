@@ -1,5 +1,6 @@
 .projects-container {
   padding-top: 120px;
+  padding-bottom: 0 !important;
   color: #ffffff;
   text-align: center;
   width: 100%;
@@ -14,17 +15,36 @@
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
+/* Center all rows and remove extra spacing */
 .project-row {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
   padding: 0 1rem;
-  margin: 0;
+  margin: 0 auto;
 }
 
-.project-card {
-  border: none;
-  width: 100%;
+/* Fix card column spacing issue */
+.project-col {
   max-width: 350px;
+  flex: 1 1 auto;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding: 0 !important;
+}
+
+/* Remove bottom margin from cards in the last row */
+.project-row:last-of-type .project-col {
+  margin-bottom: 0 !important;
+}
+
+/* Card styling */
+.project-card {
+  border: none !important;
+  width: 100% !important;
   border-radius: 30px;
-  background-color: transparent;
+  background-color: transparent !important;
+  background: transparent !important;
   overflow: hidden;
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   box-shadow: 0 4px 5px 3px rgba(119, 53, 136, 0.459) !important;
@@ -44,23 +64,26 @@
   border-radius: 30px;
   height: 250px;
   object-fit: cover;
+  background: transparent !important;
 }
 
 .project-card .card-body {
   padding: 1.5rem;
+  background: transparent !important;
+  background-color: transparent !important;
 }
 
 .project-card .card-title {
   font-size: 1.5rem;
   font-weight: bold;
   margin-bottom: 1rem;
-  color: #1e005e;
+  color: #ffffff;
 }
 
 .project-card .card-text {
   margin-bottom: 10px;
   text-align: justify;
-  color: rgba(18, 0, 82, 0.9);
+  color: rgba(239, 239, 239, 0.9);
 }
 
 .project-card .btn {
@@ -80,11 +103,12 @@
   transform: translateY(-2px);
 }
 
+/* Responsive adjustments */
 @media (max-width: 767px) {
   .projects-container {
     padding-top: 80px;
   }
-  
+
   .projects-title {
     font-size: 2rem;
   }
@@ -94,20 +118,34 @@
   }
 
   .project-card {
-    width: 100%;
     margin-bottom: 1rem;
   }
-  
+
   .project-card .card-img-top {
     height: 200px;
     padding: 15px;
   }
-  
+
   .project-card .card-body {
     padding: 1rem;
   }
-  
+
   .project-card .card-title {
     font-size: 1.3rem;
   }
+}
+
+/* Force override Bootstrap's default white background */
+.card {
+  background-color: transparent !important;
+  background: transparent !important;
+}
+
+.card-body {
+  background-color: transparent !important;
+  background: transparent !important;
+}
+
+.card-img-top {
+  background: transparent !important;
 }
