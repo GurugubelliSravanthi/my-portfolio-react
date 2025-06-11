@@ -1,311 +1,361 @@
-/* About.css */
+/* About.css - Professional Version */
 
-/* General Setup */
 .about-section {
-  padding: 3rem 2rem;
-  /* background-color: #f9f9f9; */
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #2d2d2d;
+  padding: 4rem 0;
+  font-family: 'Inter', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #ffffff ;
+  line-height: 1.6;
 }
 
-/* Section Headers */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Section Header */
 .section-header {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 1.5rem;
-}
-
-.header-accent {
-  color: #0e76a8;
-  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 3rem;
 }
 
 .section-title {
-  font-size: 1.75rem;
-  font-weight: bold;
-  color: #333;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 1rem 0;
+  letter-spacing: -0.025em;
 }
 
-/* Main Layout */
-.main-content-section {
-  display: flex;
-  flex-direction: column;
+.title-underline {
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #3b82f6, #1d4ed8);
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+.section-subtitle {
+  font-size: 1.875rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 3rem 0 2rem 0;
+  text-align: center;
+}
+
+/* Content Grid */
+.content-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
   gap: 3rem;
+  margin-bottom: 4rem;
 }
 
-@media (min-width: 900px) {
-  .main-content-section {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  .description-section,
-  .resume-section {
-    flex: 1;
+@media (max-width: 968px) {
+  .content-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
   }
 }
 
-/* About Me */
-.content-box {
-  background-color: #fff;
-  padding: 2rem;
+/* Summary Card */
+.summary-card {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  padding: 2.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(10px);
 }
 
-.about-content p {
-  margin: 0.8rem 0;
-  line-height: 1.6;
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 1.5rem 0;
+}
+
+.summary-text {
   font-size: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0 0 2rem 0;
+  line-height: 1.7;
 }
 
-.summary-title,
-.skills-title,
-.experience-title {
-  margin-top: 1.5rem;
+/* Skills Section */
+.skills-section {
+  margin-bottom: 2rem;
+}
+
+.skills-title {
   font-size: 1.25rem;
-  color: #0e76a8;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 1rem 0;
 }
 
-/* Skills */
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1rem;
-  margin-top: 1rem;
 }
 
 .skill-item {
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 0.5rem 1rem;
-  background: #e9f3f9;
+  gap: 0.75rem;
+  padding: 0.875rem 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 8px;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
 }
 
 .skill-item:hover {
-  background: #d3e9f5;
-  transform: scale(1.03);
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
 }
 
 .skill-icon {
   font-size: 1.25rem;
-  color: #0e76a8;
+  color: #3b82f6;
 }
 
 .skill-name {
+  font-size: 0.95rem;
   font-weight: 500;
+  color: rgba(255, 255, 255, 0.95);
 }
 
-/* Resume Section */
-.resume-container {
-  display: flex;
-  justify-content: center;
+/* Experience Highlight */
+.experience-highlight {
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
+.experience-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 1rem 0;
+}
+
+.experience-text {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+  line-height: 1.7;
+}
+
+/* Resume Card */
 .resume-card {
-  background-color: #ffffff;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  padding: 2rem;
-  text-align: center;
-  max-width: 400px;
-  width: 100%;
+  padding: 2.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(10px);
+  height: fit-content;
 }
 
-.resume-icon-wrapper {
-  position: relative;
+.resume-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
 }
 
-.resume-main-icon {
-  font-size: 3rem;
-  color: #d9534f;
-}
-
-.icon-glow {
-  position: absolute;
-  top: -5px;
-  left: -5px;
-  width: 60px;
-  height: 60px;
-  background: radial-gradient(circle, #ffdede, transparent);
-  border-radius: 50%;
-  z-index: -1;
-}
-
-.resume-badge {
-  margin-top: 0.5rem;
-  color: #555;
-  font-size: 0.9rem;
+.resume-icon {
+  font-size: 1.5rem;
+  color: #dc2626;
 }
 
 .resume-title {
-  font-size: 1.3rem;
-  margin-top: 1rem;
-  color: #222;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0;
 }
 
 .resume-description {
   font-size: 1rem;
-  margin: 1rem 0;
-  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0 0 2rem 0;
+  line-height: 1.7;
 }
 
 .resume-actions {
   display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: 1rem;
+  flex-direction: column;
+  gap: 0.75rem;
 }
 
-.resume-btn {
+/* Buttons */
+.btn {
   display: flex;
   align-items: center;
-  gap: 8px;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
   border: none;
-  padding: 0.6rem 1rem;
   border-radius: 8px;
-  cursor: pointer;
+  font-size: 0.95rem;
   font-weight: 500;
-  transition: background 0.3s;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
 }
 
-.view-btn {
-  background-color: #0e76a8;
+.btn-primary {
+  background: #3b82f6;
   color: white;
 }
 
-.view-btn:hover {
-  background-color: #095c85;
+.btn-primary:hover {
+  background: #2563eb;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.25);
 }
 
-.download-btn {
-  background-color: #28a745;
-  color: white;
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.25);
 }
 
-.download-btn:hover {
-  background-color: #1e7e34;
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
 }
 
 /* Education Section */
 .education-section {
-  margin-top: 4rem;
-}
-
-.education-timeline {
   margin-top: 2rem;
 }
 
-.education-cards {
+.education-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 2rem;
 }
 
-.edu-card {
-  background-color: #ffffff;
+.education-item {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 12px;
-  padding: 1.5rem;
-  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.06);
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(10px);
   position: relative;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
 }
 
-.edu-card:hover {
-  transform: translateY(-5px);
+.education-item:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+  transform: translateY(-2px);
 }
 
-.edu-status {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background-color: #ffc107;
-  color: #333;
-  font-size: 0.75rem;
-  padding: 0.2rem 0.5rem;
-  border-radius: 6px;
+.education-item.current {
+  border-left: 4px solid #3b82f6;
 }
 
-.edu-icon-wrapper {
-  font-size: 2rem;
-  color: #0e76a8;
+.edu-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   margin-bottom: 1rem;
 }
 
-.edu-title {
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin-bottom: 0.3rem;
+.edu-icon {
+  font-size: 1.5rem;
+  color: #3b82f6;
 }
 
-.edu-field,
-.edu-institute {
+.edu-status {
+  background: #dbeafe;
+  color: #1d4ed8;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.edu-degree {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 0.5rem 0;
+}
+
+.edu-field {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0 0 0.25rem 0;
+  font-weight: 500;
+}
+
+.edu-institution {
   font-size: 0.95rem;
-  color: #555;
-  margin-bottom: 0.3rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0 0 1rem 0;
 }
 
-.edu-meta {
+.edu-details {
   display: flex;
   justify-content: space-between;
-  font-size: 0.85rem;
-  margin-top: 0.5rem;
-  color: #333;
-}
-
-.edu-score.excellent {
-  color: #28a745;
-}
-
-.edu-score.good {
-  color: #17a2b8;
-}
-
-.edu-score.outstanding {
-  color: #ff5733;
-}
-
-/* Progress Bar */
-.progress-section {
-  margin-top: 1rem;
-}
-
-.progress-bar {
-  background-color: #eee;
-  border-radius: 20px;
-  overflow: hidden;
-  height: 10px;
-  margin-top: 0.5rem;
-}
-
-.progress-fill {
-  height: 100%;
-  background-color: #0e76a8;
-  border-radius: 20px 0 0 20px;
-}
-
-.progress-text {
-  font-size: 0.8rem;
-  margin-top: 0.3rem;
-}
-
-/* Achievement Badge */
-.achievement-badge {
-  margin-top: 0.8rem;
-  background-color: #f0f8ff;
-  padding: 0.3rem 0.6rem;
-  border-radius: 8px;
-  font-size: 0.8rem;
-  display: inline-flex;
   align-items: center;
-  gap: 5px;
-  color: #0e76a8;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.achievement-icon {
-  font-size: 1rem;
+.edu-period {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 500;
+}
+
+.edu-grade {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #059669;
+  background: #d1fae5;
+  padding: 0.25rem 0.75rem;
+  border-radius: 6px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-section {
+    padding: 2rem 0;
+  }
+  
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .summary-card,
+  .resume-card,
+  .education-item {
+    padding: 1.5rem;
+  }
+  
+  .education-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .resume-actions {
+    flex-direction: column;
+  }
 }
