@@ -2,14 +2,18 @@ import React, { useState, useEffect } from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import {
-  HiHome,
   HiUser,
   HiCollection,
   HiMail,
   HiMenu,
   HiX,
-  HiSparkles
 } from 'react-icons/hi';
+import { GoHome } from "react-icons/go";
+import { CiUser } from "react-icons/ci";
+import { SiHyperskill } from "react-icons/si";
+import { LiaProjectDiagramSolid } from "react-icons/lia";
+
+
 import './Header.css';
 
 function Header() {
@@ -25,11 +29,11 @@ function Header() {
   }, []);
 
   const navItems = [
-    { name: 'Home', icon: HiHome, path: '/' },
-    { name: 'About', icon: HiUser, path: '/about' },
-    { name: 'Skills', icon: HiUser, path: '/skills' },
-    { name: 'Projects', icon: HiCollection, path: '/projects' },
-    { name: 'Contact', icon: HiMail, path: '/contact' }
+    { name: "Home", icon: GoHome, path: "/" },
+    { name: "About", icon: CiUser, path: "/about" },
+    { name: "Skills", icon: SiHyperskill, path: "/skills" },
+    { name: "Projects", icon: LiaProjectDiagramSolid, path: "/projects" },
+    { name: "Contact", icon: HiMail, path: "/contact" },
   ];
 
   const toggleNavbar = () => {
