@@ -123,7 +123,7 @@ const About = () => {
               </p>
               <div className="edu-details">
                 <span className="edu-period">2022 – 2026</span>
-                <span className="edu-grade">CGPA: 8.7</span>
+                <span className="edu-grade">CGPA: 8.9</span>
               </div>
             </div>
 
