@@ -1,11 +1,10 @@
 import React from "react";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import "./Projects.css";
-// Import your project images (you'll need to add these)
+
+// Import images
 import PortfolioImg from "../assets/portfolio.png";
-// import ResumeBuilderImg from "../assets/resume-builder.jpg";
 import CarocartImg from "../assets/carocart.png";
-// import SmartPondImg from "../assets/smart-pond.jpg";
 
 const projects = [
   {
@@ -21,7 +20,6 @@ const projects = [
     title: "Resume Builder",
     description:
       "An interactive web application that helps users create professional resumes quickly. Features include multiple templates, real-time preview, PDF export functionality, and form validation.",
-    // imageUrl: ResumeBuilderImg,
     link: "#",
   },
   {
@@ -37,7 +35,6 @@ const projects = [
     title: "Smart Pond Monitoring System",
     description:
       "IoT-based solution for monitoring pond conditions including water quality, temperature, and pH levels. Features real-time data visualization, alerts, and remote monitoring capabilities.",
-    // imageUrl: SmartPondImg,
     link: "#",
   },
 ];
@@ -50,19 +47,24 @@ const Projects = () => {
           <h2 className="projects-title">My Projects</h2>
         </Col>
       </Row>
-      <Row className="project-row">
+
+      {/* First Row */}
+      <Row className="project-row justify-content-center">
         {projects.slice(0, 2).map((project) => (
           <Col
             md={6}
+            lg={5}
             key={project.id}
-            className="d-flex align-items-stretch mb-4"
+            className="d-flex align-items-stretch mb-4 project-col"
           >
             <Card className="project-card">
-              <Card.Img
-                variant="top"
-                src={project.imageUrl}
-                className="card-img-top"
-              />
+              {project.imageUrl && (
+                <Card.Img
+                  variant="top"
+                  src={project.imageUrl}
+                  className="card-img-top"
+                />
+              )}
               <Card.Body>
                 <Card.Title>{project.title}</Card.Title>
                 <Card.Text>{project.description}</Card.Text>
@@ -74,19 +76,24 @@ const Projects = () => {
           </Col>
         ))}
       </Row>
-      <Row className="project-row">
+
+      {/* Second Row */}
+      <Row className="project-row justify-content-center">
         {projects.slice(2, 4).map((project) => (
           <Col
             md={6}
+            lg={5}
             key={project.id}
-            className="d-flex align-items-stretch mb-4"
+            className="d-flex align-items-stretch mb-4 project-col"
           >
             <Card className="project-card">
-              <Card.Img
-                variant="top"
-                src={project.imageUrl}
-                className="card-img-top"
-              />
+              {project.imageUrl && (
+                <Card.Img
+                  variant="top"
+                  src={project.imageUrl}
+                  className="card-img-top"
+                />
+              )}
               <Card.Body>
                 <Card.Title>{project.title}</Card.Title>
                 <Card.Text>{project.description}</Card.Text>
