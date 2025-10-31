@@ -24,7 +24,7 @@
     "react-router-dom": "^7.6.0",
     "react-tsparticles": "^2.12.2",
     "three": "^0.177.0",
-    "tsparticles": "^3.8.1"
+    "tsparticles": "^3.9.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.25.0",
